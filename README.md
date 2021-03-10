@@ -1,1 +1,1 @@
-# q1_info_proj
+# Q1 Informatik Projekt
