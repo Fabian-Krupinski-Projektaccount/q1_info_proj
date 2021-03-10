@@ -20,4 +20,6 @@ jobs:
         LOCAL_DIR: public_html
         METHOD: sftp
         PORT: 22
+        EXCLUDE: README.md
+          - LICENSE
         ARGS: --delete
