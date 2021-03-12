@@ -16,6 +16,6 @@ jobs:
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_SSH_KEY }}
-        remote-path: /public_html/
+        ssh_private_key: ${{ secrets.FTP_SSH_KEY }}
+        remote_path: /public_html/
         
