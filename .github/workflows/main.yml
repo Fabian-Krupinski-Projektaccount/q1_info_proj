@@ -13,11 +13,11 @@ jobs:
         
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      env:
-        FTP_SERVER: ftp.krupinski.tk
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        METHOD: sftp
-        PORT: 22
-        SERVER_DIR: /public_html/
+      with:
+        server: ftp.krupinski.tk
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        method: sftp
+        port: 22
+        server_dir: /public_html/
         
