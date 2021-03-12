@@ -14,9 +14,8 @@ jobs:
     - name: FTP-Deploy-Action
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        server: ftp.krupinski.tk
+        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        port: 22
-        server-dir: /public_html/
+        password: ${{ secrets.FTP_SSH_KEY }}
+        remote-path: /public_html/
         
