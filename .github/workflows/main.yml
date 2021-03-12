@@ -3,7 +3,7 @@ on:
     branches:    
       - master
       
-name: Build and Publish Averment
+name: Publish
 jobs:
   SFTP-Deploy:
     name: deploy
@@ -12,11 +12,11 @@ jobs:
     - uses: actions/checkout@master
         
     - name: FTP-Deploy-Action
-      uses: wlixcc/SFTP-Deploy-Action@v1.0
-      with:
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      env:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        ssh_private_key: ${{ secrets.FTP_SSH_KEY }}
-        local_path: ./*
-        remote_path: /public_html/
-        
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: sftp
+        port: 22
+        server-dir: /public_html/
