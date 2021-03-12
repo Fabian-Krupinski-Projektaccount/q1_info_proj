@@ -19,6 +19,5 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         METHOD: sftp
         PORT: 22
-        LOCAL_DIR: ./public_html/
-        SERVER_DIR: public_html/
+        SERVER_DIR: /public_html/
         
