@@ -5,19 +5,18 @@ on:
       
 name: Build and Publish Averment
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  SFTP-Deploy:
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
         
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
         server: ftp.krupinski.tk
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        protocol: sftp
         port: 22
         server-dir: /public_html/
         
