@@ -1,5 +1,5 @@
 <?php
-$conf = new Config('/public_html/config/db.json');
+$conf = new Config('/public_html/config/db.conf');
 
 try {
     $pdo = new PDO('mysql:host='.$conf->get('server').';dbname='.$conf->get('database').'', $conf->get('username'), $conf->get('password'));
