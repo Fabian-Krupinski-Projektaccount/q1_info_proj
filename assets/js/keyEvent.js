@@ -28,6 +28,9 @@ class Keyboard {
 	static keyboardMap[40];  // DOW
 	static keyboardMap[91];  // OS_KEY
 	
+	static getNameOfKeyCode(e){
+		return Keyboard.key[e];
+	}
 
 	static getKeyState(e) {
 		return Keyboard.key[e];
@@ -56,7 +59,7 @@ document.addEventListener('oncontextmenu', function() {
 
 
 
-function convertInfosintoActions() {
+function getNameOfKeyCode() {
 	
 	var stringFromCharCode = String.fromCharCode();
 	
@@ -68,7 +71,10 @@ function convertInfosintoActions() {
 	
 }
 
+
 /*
 Author: Fabian Krupinski
 Created at: 13.02.2020 09:27 
+Perfected: Alex Sinkus
+Finished at: 25.03.2021 
 */
