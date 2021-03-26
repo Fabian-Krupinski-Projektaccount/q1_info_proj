@@ -25,7 +25,7 @@ class Keyboard {
 	static keyboardMap[37];  // LEFT
 	static keyboardMap[38];  // UP
 	static keyboardMap[39];  // RIGHT
-	static keyboardMap[40];  // DOW
+	static keyboardMap[40];  // DOWN
 	static keyboardMap[91];  // OS_KEY
 	
 	static getNameOfKeyCode(e){
@@ -34,6 +34,11 @@ class Keyboard {
 
 	static getKeyState(e) {
 		return Keyboard.key[e];
+	}
+	
+	static outputAction(e) {
+		return Keyboard.key[e];
+		
 	}
 }
 
@@ -68,6 +73,21 @@ function getNameOfKeyCode() {
 	}
 	
 	return stringFromCharCode;
+	
+}
+
+
+function outputAction() {
+	
+	if stringFromCharCode == "UP" {
+		console.log("UP");
+	}else if stringFromCharCode == "RIGHT" {
+		console.log("RIGHT");
+	}else if stringFromCharCode == "DOWN" {
+		console.log("DOWN");
+	}else if stringFromCharCode == "LEFT" {
+		console.log("LEFT");
+	}
 	
 }
 
