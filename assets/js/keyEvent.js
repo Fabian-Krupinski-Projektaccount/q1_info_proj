@@ -62,9 +62,9 @@ document.addEventListener('oncontextmenu', function() {
 
 
 
-function getNameOfKeyCode(asciiCodefromKey) {
+function getNameOfKeyCode(keyCode) {
 	
-	var stringFromCharCode = String.fromCharCode(asciiCodefromKey);
+	var stringFromCharCode = String.fromCharCode(keyCode);
 	
 	if keyboardMap[e] {
 		stringFromCharCode = keyboardMap[e];
@@ -76,15 +76,15 @@ function getNameOfKeyCode(asciiCodefromKey) {
 
 
 
-function outputAction() {
+function outputAction(nameOfKey) {
 	
-	if stringFromCharCode == "UP" {
+	if nameOfKey == "UP" {
 		console.log("UP");
-	}else if stringFromCharCode == "RIGHT" {
+	}else if nameOfKey == "RIGHT" {
 		console.log("RIGHT");
-	}else if stringFromCharCode == "DOWN" {
+	}else if nameOfKey == "DOWN" {
 		console.log("DOWN");
-	}else if stringFromCharCode == "LEFT" {
+	}else if nameOfKey == "LEFT" {
 		console.log("LEFT");
 	}
 	
