@@ -42,7 +42,6 @@ class Keyboard {
 	}
 }
 
-Keyboard = new Keyboard();
 
 window.addEventListener('onfocusout', function() {
 	for(var i in Keyboard.key) {
@@ -63,10 +62,9 @@ document.addEventListener('oncontextmenu', function() {
 
 
 
-
-function getNameOfKeyCode() {
+function getNameOfKeyCode(asciiCodefromKey) {
 	
-	var stringFromCharCode = String.fromCharCode();
+	var stringFromCharCode = String.fromCharCode(asciiCodefromKey);
 	
 	if keyboardMap[e] {
 		stringFromCharCode = keyboardMap[e];
@@ -75,6 +73,7 @@ function getNameOfKeyCode() {
 	return stringFromCharCode;
 	
 }
+
 
 
 function outputAction() {
