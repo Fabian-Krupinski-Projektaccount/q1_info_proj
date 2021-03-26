@@ -1,5 +1,6 @@
 function key_down(e) {
 	var key = e.keyCode || e.which;
+	console.log(Keyboard.getNameOfKeyCode(key));
 	Keyboard.key[key] = true;
 }
 function key_up(e) {
@@ -11,36 +12,35 @@ window.addEventListener('keydown', key_down, false);
 window.addEventListener('keyup', key_up, false);
 
 class Keyboard {
-
 	static key = new Array();
 	static keyboardMap = new Array();
-	
-	static keyboardMap[9];  // TAB
-	static keyboardMap[13];  // ENTER
-	static keyboardMap[16];  // SHIFT
-	static keyboardMap[17];  // CONTROL
-	static keyboardMap[18];  // ALT
-	static keyboardMap[20];  // CAPS_LOCK
-	static keyboardMap[32];  // SPACE
-	static keyboardMap[37];  // LEFT
-	static keyboardMap[38];  // UP
-	static keyboardMap[39];  // RIGHT
-	static keyboardMap[40];  // DOWN
-	static keyboardMap[91];  // OS_KEY
-	
-	static getNameOfKeyCode(e){
-		return Keyboard.key[e];
+
+	static getNameOfKeyCode(keyCode){
+		var stringFromCharCode = String.fromCharCode(keyCode);
+
+		if(Keyboard.keyboardMap[keyCode]) {
+			stringFromCharCode = Keyboard.keyboardMap[keyCode];
+		}
+
+		return stringFromCharCode;
 	}
 
 	static getKeyState(e) {
 		return Keyboard.key[e];
 	}
-	
-	static outputAction(e) {
-		return Keyboard.key[e];
-		
-	}
 }
+Keyboard.keyboardMap[9];  // TAB
+Keyboard.keyboardMap[13];  // ENTER
+Keyboard.keyboardMap[16];  // SHIFT
+Keyboard.keyboardMap[17];  // CONTROL
+Keyboard.keyboardMap[18];  // ALT
+Keyboard.keyboardMap[20];  // CAPS_LOCK
+Keyboard.keyboardMap[32];  // SPACE
+Keyboard.keyboardMap[37];  // LEFT
+Keyboard.keyboardMap[38];  // UP
+Keyboard.keyboardMap[39];  // RIGHT
+Keyboard.keyboardMap[40];  // DOWN
+Keyboard.keyboardMap[91];  // OS_KEY
 
 
 window.addEventListener('onfocusout', function() {
@@ -61,39 +61,9 @@ document.addEventListener('oncontextmenu', function() {
 
 
 
-
-function getNameOfKeyCode(keyCode) {
-	
-	var stringFromCharCode = String.fromCharCode(keyCode);
-	
-	if keyboardMap[e] {
-		stringFromCharCode = keyboardMap[e];
-	}
-	
-	return stringFromCharCode;
-	
-}
-
-
-
-function outputAction(nameOfKey) {
-	
-	if nameOfKey == "UP" {
-		console.log("UP");
-	}else if nameOfKey == "RIGHT" {
-		console.log("RIGHT");
-	}else if nameOfKey == "DOWN" {
-		console.log("DOWN");
-	}else if nameOfKey == "LEFT" {
-		console.log("LEFT");
-	}
-	
-}
-
-
 /*
 Author: Fabian Krupinski
-Created at: 13.02.2020 09:27 
+Created at: 13.02.2020 09:27
 Perfected: Alex Sinkus
-Finished at: 25.03.2021 
+Finished at: 25.03.2021
 */
