@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/public_html/assets/css/main.css">
 
         <script src="/public_html/assets/js/babylon.js"></script>
+		<script src="/public_html/assets/js/keyEvent.js"></script>
     </head>
     <body>
         <canvas id="main_canvas"></canvas>

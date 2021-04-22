@@ -1,0 +1,37 @@
+Arrow Keys: (37-40)
+keyboardMap[37];  // LEFT
+keyboardMap[38];  // UP
+keyboardMap[39];  // RIGHT
+keyboardMap[40];  // DOWN
+
+
+Tab Key: (9)
+keyboardMap[9];  // TAB
+
+
+Enter Key: (13)
+keyboardMap[13];  // ENTER
+
+
+Spacebar Key: (32)
+keyboardMap[32];  // SPACE
+
+
+OS Specific Key (91) Windows Key (Windows) or Command Key (Mac)
+keyboardMap[91];  // OS_KEY
+
+
+Alt Key: (18)
+keyboardMap[18];  // ALT
+
+
+Control Key: (17)
+keyboardMap[17];  // CONTROL
+
+
+Shift Key: (16)
+keyboardMap[16];  // SHIFT
+
+
+Caps Lock Key: (20)
+keyboardMap[20];  // CAPS_LOCK
